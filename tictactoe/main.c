@@ -3,9 +3,10 @@
 #include <string.h>
 
 int main(){
-    Game game;
+    Game game = {0};
     game.winner = 0;
     game.player = 'O';
+
     strcpy(game.board,"012345678");
 
     play(&game);

@@ -81,10 +81,15 @@ void checkWinner(int pos,int count, Game* game) {
     }
 
     for (int i = 0; i < 3; i++){
+
+        printf("Row %d Stat: %d\n",i,game->rowCount[i]);
+        printf("Col %d Stat: %d\n",i,game->colCount[i]);
+
         if (game->rowCount[i] == 3 || game->colCount[i] == 3) {
             game->winner = 1;
             return;
         }
+
         if (game->rowCount[i] == -3 || game->colCount[i] == -3) {
             game->winner = -1;
             return;
@@ -92,6 +97,9 @@ void checkWinner(int pos,int count, Game* game) {
     }
 
     for (int i = 0; i < 2; i++){
+
+        printf("Diag %d Stat: %d\n",i,game->diagCount[i]);
+
         if (game->diagCount[i] == 3) {
             game->winner = 1;
             return;
