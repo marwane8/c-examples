@@ -69,7 +69,7 @@ void checkWinner(int pos,int count, Game* game) {
         break;
    case 7:
         game->rowCount[2]+=count;
-        game->colCount[2]+=count;
+        game->colCount[1]+=count;
         break;
    case 8:
         game->rowCount[2]+=count;
@@ -142,7 +142,7 @@ void play(Game* game) {
     {
         game->player = (game->player == 'X') ? 'O' : 'X';
 
-        clrscr();
+        //clrscr();
         
         printf("Player %c's Turn \n",game->player);
 
